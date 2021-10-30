@@ -3,9 +3,11 @@ from geopy.geocoders import Nominatim
 from pprint import pprint
 
 app = Nominatim(user_agent='tutorial')
-location = app.geocode('서울역')
-pprint(location)
+station = input("역이름을 입력해주세요(예: 서울역)\n")
+location = app.geocode(station)
 
+#역 정보 및 좌표
+pprint(location)
 pprint(location.point.latitude)
 pprint(location.point.longitude)
 
