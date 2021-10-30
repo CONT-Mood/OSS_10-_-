@@ -3,7 +3,7 @@
 
 + get_location.py
 
-'''
 Google Colaboratoy에서 작업(Google Map GUI 사용을 위해서)
 geopy, folium 모듈이 필요함(pip install geopy, pip install folium)
-'''
+
+
