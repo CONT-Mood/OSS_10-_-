@@ -5,5 +5,5 @@
 ~~~
   Google Colaboratoy에서 작업(Google Map GUI 사용을 위해서)
   geopy, folium 모듈이 필요함(pip install geopy, pip install folium)
-  실행 예시 : <https://colab.research.google.com/drive/1vFPYwi6KGroqLTo8QT-7dAPSNhCnMGKu/>
 ~~~
+실행 예시: <https://colab.research.google.com/drive/1vFPYwi6KGroqLTo8QT-7dAPSNhCnMGKu/>
