@@ -1,9 +1,13 @@
 import pandas as pd
-from openpyxl import load_workbook
+from requests import get
 from haversine import haversine
 import folium
 from geopy.geocoders import Nominatim
-from pprint import pprint
+
+# 지하철좌표 엑셀 파일을 받아옴
+with open("지하철좌표.xlsx", "wb") as file:
+  response = get("https://docs.google.com/spreadsheets/d/e/2PACX-1vShuUuF1vhdC8N-GpH3nwgRi5SdK760_ohl7A8MUPodJ3QK55OYOJBYr_CmVduLtg/pub?output=xlsx")
+  file.write(response.content)
 
 app = Nominatim(user_agent='tutorial')
 station = input("역이름을 입력해주세요(예: 서울역)\n")
