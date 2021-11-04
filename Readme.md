@@ -7,6 +7,6 @@
   Google Colaboratoy에서 작업(Google Map GUI 사용을 위해서)
   geopy, folium 모듈이 필요함(pip install geopy, pip install folium)
 ~~~
-+ 지하철좌표
++ 지하철좌표.
   + 출처 : https://gaussian37.github.io/python-etc-%EC%88%98%EB%8F%84%EA%B6%8C-%EC%A7%80%ED%95%98%EC%B2%A0/ 
 
