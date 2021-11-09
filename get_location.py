@@ -346,10 +346,16 @@ df = pd.read_excel('station_coordinate.xlsx', engine="openpyxl")
 g_map = folium.Map(location=[location.point.latitude, location.point.longitude], zoom_start=18)
 
 # 찾고자 하는 역을 파란색으로 마커 표시
-marker = folium.Marker([location.point.latitude, location.point.longitude],
-                       popup="<pre>" + ss[int(num) - 1] + station_info[int(num)] + "개</pre>",
-                       icon=folium.Icon(color='blue'))
-marker.add_to(g_map)
+if station_info is not None:
+    marker = folium.Marker([location.point.latitude, location.point.longitude],
+                           popup="<pre>" + ss[int(num) - 1] + station_info[int(num)] + "개</pre>",
+                           icon=folium.Icon(color='blue'))
+    marker.add_to(g_map)
+else:
+    marker = folium.Marker([location.point.latitude, location.point.longitude],
+                           popup="<pre>" + ss[int(num) - 1] + "0개</pre>",
+                           icon=folium.Icon(color='blue'))
+    marker.add_to(g_map)
 
 # 주변 역 표시
 for i in range(1, 439):
