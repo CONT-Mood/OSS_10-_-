@@ -7,5 +7,5 @@
   Google Colaboratoy에서 작업(Google Map GUI 사용을 위해서)
   geopy, folium 모듈이 필요함(pip install geopy, pip install folium)
 ~~~
-+ 지하철좌표.xlsx
++ station_coordinate.xlsx (지하철좌표파일)
   + 출처 : https://observablehq.com/@taekie/seoul_subway_station_coordinate#station_coordinate
