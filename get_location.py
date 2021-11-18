@@ -343,10 +343,10 @@ location = app.geocode(station)
 # 수도권 지하철 정보 엑셀 파일 가져옴
 df = pd.read_excel('station_coordinate.xlsx', engine="openpyxl")
 # 구글맵을 불러옴
-g_map = folium.Map(location=[location.point.latitude, location.point.longitude], zoom_start=18)
+g_map = folium.Map(location=[location.point.latitude, location.point.longitude], zoom_start=15)
 
 # 찾고자 하는 역을 파란색으로 마커 표시
-if station_info is not None:
+if (station_info is not None) & (station_info[int(num)] != ''):
     marker = folium.Marker([location.point.latitude, location.point.longitude],
                            popup="<pre>" + ss[int(num) - 1] + station_info[int(num)] + "개</pre>",
                            icon=folium.Icon(color='blue'))
@@ -363,7 +363,7 @@ for i in range(1, 439):
     goal = (df.loc[i]['lat'], df.loc[i]['lng'])
     dis = haversine(start, goal)
     # 주변 약 1킬로미터 역들을 보라색으로 표시
-    if (dis <= 1):
+    if (dis <= 1.5):
         line = int(df.loc[i]['line'][1:2])
         station_info = find_info(df.loc[i]['name'], line)
         if station_info is not None:
