@@ -6,7 +6,7 @@ from geopy.geocoders import Nominatim
 import requests
 from bs4 import BeautifulSoup
 
-# 지하철역 정보를 받아옴
+# 지하철역 정보를 사이트에서 받아옴
 response = requests.get('http://www.seoulmetro.co.kr/kr/page.do?menuIdx=366#none')
 soup = BeautifulSoup(response.content, 'html.parser')
 table = soup.find('table', { 'class': 'tbl-type1 t-col'})
