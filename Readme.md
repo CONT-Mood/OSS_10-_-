@@ -7,6 +7,7 @@
   Google Colaboratoy에서 작업(Google Map GUI 사용을 위해서)
   geopy, folium 모듈이 필요함(pip install geopy, pip install folium)
   .ipynb 파일은 구글 코랩에서 실행하는 것을 보여주기 위한 파일임. .py파일과 동일함
+  gui구현.py 파일은 인터페이스를 위해 제작 시도했으나 미완성.
 ~~~
 + station_coordinate.csv (지하철좌표파일)
   + 출처 : https://observablehq.com/@taekie/seoul_subway_station_coordinate#station_coordinate
